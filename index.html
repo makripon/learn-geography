@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoQuest - Learn Geography</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>🌍 GeoQuest</h1>
+      <p>Learn and self-test geography with interactive MCQs and map challenges.</p>
+    </header>
+
+    <main class="app-main">
+      <section class="controls card">
+        <label for="modeSelect">Choose quiz mode</label>
+        <select id="modeSelect">
+          <option value="qa">Country Facts MCQ</option>
+          <option value="flag">Identify Country by Flag</option>
+          <option value="reverseFlag">Identify Flag by Country</option>
+          <option value="animal">National Animal MCQ</option>
+          <option value="continent">Continent MCQ</option>
+          <option value="countryMap">Country Location on Map</option>
+          <option value="cityMap">City Location on Map</option>
+        </select>
+        <button id="newQuizBtn">New Question</button>
+      </section>
+
+      <section class="quiz card" id="quizCard">
+        <div id="questionMeta" class="meta"></div>
+        <h2 id="questionText">Press "New Question" to start.</h2>
+        <div id="flagArea" class="flag-area hidden"></div>
+        <div id="mapArea" class="map-area hidden">
+          <img id="worldMap" src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" alt="World map" />
+          <div id="targetMarker" class="marker hidden"></div>
+        </div>
+        <div id="options" class="options"></div>
+        <p id="feedback" class="feedback"></p>
+      </section>
+
+      <section class="score card">
+        <h3>Score</h3>
+        <p><strong id="correctCount">0</strong> correct / <strong id="attemptCount">0</strong> attempts</p>
+        <button id="resetScoreBtn" class="secondary">Reset Score</button>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <small>Mobile-friendly web app for browsers and webviews.</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
